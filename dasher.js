@@ -14,7 +14,7 @@ function update_igregia() {
     		index=index+1;
     		if(index>=ans.length) {
     			alert("You guessed: "+igreiga);
-    			index=1;
+    			index=0;
     			igreiga = template;
     			document.getElementById("demo").innerHTML = igreiga;
     		}
