@@ -1,0 +1,8 @@
+body {background-color: powderblue;}
+
+div.answer_board p {
+		font-size: 480%;
+		font-family: Helvetica;
+		font-weight: Bold;
+		color: #444444		
+}

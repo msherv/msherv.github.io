@@ -3,41 +3,23 @@
   <head>
   	<meta charset="UTF-8">
     <title> Guess the Headline </title>
+    <link rel="stylesheet" href="corpstyle.css" type="text/css"> 
+    <script src="dasher.js"></script>
   </head>
 
   <body>
-	<p id="demo"></p>
-	<button onclick="update_igregia()">Send</button>
-	<textarea id="input_char" rows="1" cols="5">*</textarea>
-
-	<script>
-		var ans =     "Design-by-Nature."
-		var igreiga = "******-**-******."
-		var template = "******-**-******."
-		var index = 1;
-    	document.getElementById("demo").innerHTML = igreiga;
-    	
-    	function update_igregia() {    		
-    		console.log(document.getElementById("input_char").value);    		
-    		var arr = igreiga.split("");
-    		arr[index] = document.getElementById("input_char").value;
-    		igreiga = "";
-    		for(i=0; i<ans.length;i++) {
-    			igreiga += arr[i];
-    		}
-    		console.log(igreiga);
-    		document.getElementById("input_char").value="*";
-    		document.getElementById("demo").innerHTML = igreiga;
-    		index=index+1;
-    		if(index>=ans.length) {
-    			alert("You guessed: "+igreiga);
-    			index=1;
-    			igreiga = template;
-    			document.getElementById("demo").innerHTML = igreiga;
-    		}
-    	}
-
-    </script> 
+  	<div class="answer_board" lang="en"> <center>
+	<p id="demo" ></p>	
+	<textarea id="input_char" rows="10" cols="10" placeholder="Enter Character"></textarea>
+	<button onclick="if(check_input()) {update_igregia();}">Guess</button>
+	</center> </div>
   </body>
+
+  <script type="text/javascript">
+  	    var igreiga = "******-**-******"
+        var template = "******-**-******"
+        var index = 0;
+        document.getElementById("demo").innerHTML = igreiga;
+  </script>
 
 </html>
