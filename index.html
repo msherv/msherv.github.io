@@ -8,13 +8,13 @@
   <body>
 	<p id="demo"></p>
 	<button onclick="update_igregia()">Send</button>
-	<textarea id="input_char" rows="1" cols="1" placeholder="*"></textarea>
+	<textarea id="input_char" rows="1" cols="5">*</textarea>
 
 	<script>
 		var ans =     "Design-by-Nature."
 		var igreiga = "******-**-******."
 		var template = "******-**-******."
-		var index = 0;
+		var index = 1;
     	document.getElementById("demo").innerHTML = igreiga;
     	
     	function update_igregia() {    		
@@ -26,7 +26,7 @@
     		index=index+1;
     		if(index>=ans.length) {
     			alert("You guessed: "+igreiga);
-    			index=0;
+    			index=1;
     			igreiga = template;
     			document.getElementById("demo").innerHTML = igreiga;
     		}
