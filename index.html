@@ -19,7 +19,12 @@
     	
     	function update_igregia() {    		
     		console.log(document.getElementById("input_char").value);    		
-    		igreiga[index] = document.getElementById("input_char").value;
+    		var arr = igreiga.split("");
+    		arr[index] = document.getElementById("input_char").value;
+    		igreiga = "";
+    		for(i=0; i<igregia.length;i++) {
+    			igregia += arr[i];
+    		}
     		console.log(igreiga);
     		document.getElementById("input_char").value="*";
     		document.getElementById("demo").innerHTML = igreiga;
