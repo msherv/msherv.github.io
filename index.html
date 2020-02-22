@@ -17,11 +17,11 @@
 		var index = 0;
     	document.getElementById("demo").innerHTML = igreiga;
     	
-    	function update_igregia() {
-    		console.log(document.getElementById("input_char").innerHTML);    		
-    		igreiga[index] = document.getElementById("input_char").innerHTML;
+    	function update_igregia() {    		
+    		console.log(document.getElementById("input_char").value);    		
+    		igreiga[index] = document.getElementById("input_char").value;
     		console.log(igreiga);
-    		document.getElementById("input_char").innerHTML="*";
+    		document.getElementById("input_char").value="*";
     		document.getElementById("demo").innerHTML = igreiga;
     		index=index+1;
     		if(index>=ans.length) {
