@@ -1,18 +1,35 @@
 <html>
+
   <head>
   	<meta charset="UTF-8">
     <title> Guess the Headline </title>
   </head>
-  <body>
 
-	<p id="demo"></p>  	
+  <body>
+	<p id="demo"></p>
+	<button onclick="update()">Send</button>
+	<textarea id="input_char" rows="1" cols="1" placeholder="*"></textarea>
 
 	<script>
-    	document.getElementById("demo").innerHTML = 5 + 6;
-    </script>
-    
+		var ans =     "Design-by-Nature."
+		var igreiga = "******-**-******."
+		var template = "******-**-******."
+		var index = 0;
+    	document.getElementById("demo").innerHTML = igreiga;
+    	
+    	function update_igregia() {
+    		igreiga[index] = document.getElementById("input_char").innerHTML;
+    		document.getElementById("input_char").innerHTML="*";
+    		index=index+1;
+    		if(index>=ans.length) {
+    			alert("You guessed: "+igreiga);
+    			index=0;
+    			igreiga = template;
+    			document.getElementById("demo").innerHTML = igreiga;
+    		}
+    	}
+
+    </script> 
   </body>
-
-
   
 </html>
