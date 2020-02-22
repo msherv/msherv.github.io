@@ -18,8 +18,11 @@
     	document.getElementById("demo").innerHTML = igreiga;
     	
     	function update_igregia() {
+    		console.log(document.getElementById("input_char").innerHTML);    		
     		igreiga[index] = document.getElementById("input_char").innerHTML;
+    		console.log(igreiga);
     		document.getElementById("input_char").innerHTML="*";
+    		document.getElementById("demo").innerHTML = igreiga;
     		index=index+1;
     		if(index>=ans.length) {
     			alert("You guessed: "+igreiga);
@@ -31,5 +34,5 @@
 
     </script> 
   </body>
-  
+
 </html>
